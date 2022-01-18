@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                git branch: 'main', credentialsId: 'github', url: 'git@github.com:nareshjuturu/sparkjava-war-example.git'
+            }
+        }
+        stage("var disply") {
+            steps {
+                mvn clean install
+            }
+        }
+        
+    }
+}
