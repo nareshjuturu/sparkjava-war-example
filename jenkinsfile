@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'git@github.com:nareshjuturu/sparkjava-war-example.git'
+                git branch: 'master', credentialsId: 'github', url: 'git@github.com:nareshjuturu/sparkjava-war-example.git'
             }
         }
         stage("Build") {
