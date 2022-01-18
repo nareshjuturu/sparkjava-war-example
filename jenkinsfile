@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('clone') {
             steps {
                 git branch: 'main', credentialsId: 'github', url: 'git@github.com:nareshjuturu/sparkjava-war-example.git'
             }
         }
-        stage("var disply") {
+        stage("Build") {
             steps {
                 sh 'mvn clean  install'
             }
