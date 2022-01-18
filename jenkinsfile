@@ -9,7 +9,7 @@ pipeline {
         }
         stage("var disply") {
             steps {
-                mvn clean install
+                sh 'mvn clean install'
             }
         }
         
